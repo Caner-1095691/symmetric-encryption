@@ -1,62 +1,49 @@
-# Symmetrische Encryptie Applicatie
+# Symmetric Encryption Application
+A Python application for securely encrypting and decrypting text using AES-256-GCM
 
-Een Python applicatie voor het veilig versleutelen en ontsleutelen van tekst met AES-256-GCM
-
-## Installatie
-
-```bash
+## Installation
+```
 pip install cryptography
 ```
 
-## Gebruik
-
-Start de applicatie:
-
-```bash
+## Usage
+Start the application:
+```
 python cli.py
 ```
 
-### Menu Opties
+## Menu Options
+1. Generate new key - Creates a secure 256-bit key
+2. Encrypt text - Encrypt your message with a key
+3. Decrypt text - Decrypt a message with the correct key
+4. Exit - Close the application
 
-1. **Genereer nieuwe sleutel** - Maakt een veilige 256-bit sleutel
-2. **Versleutel tekst** - Versleutel je bericht met een sleutel
-3. **Ontsleutel tekst** - Ontsleutel een bericht met de juiste sleutel
-4. **Exit** - Sluit de applicatie
+## Technical Details
+* Algorithm: AES-256-GCM (Authenticated encryption)
+* Key length: 256 bits (32 bytes)
+* Mode: Galois/Counter Mode with authentication
+* Library: Python cryptography
 
-## Technische Details
+## Files
+* `cli.py` - Command line interface
+* `crypto_utils.py` - Encryption functionalities
+* `test_crypto.py` - Unit tests
+* `README.md` - This file
 
-- **Algoritme**: AES-256-GCM (Authenticated encryption)
-- **Sleutellengte**: 256 bits (32 bytes)
-- **Mode**: Galois/counter mode met authenticatie
-- **Library**: Python cryptography
+## Kerckhoffs's Principle
+This application follows Kerckhoffs's principle: security lies entirely in the secret key, not in the algorithm. All code is public, only the key must remain secret.
 
-## Bestanden
-
-- `cli.py` - Command line interface
-- `crypto_utils.py` - encryptie functionaliteiten
-- `test_crypto.py` - Unit tests
-- `README.md` - Dit bestand
-
-## Kerckhoffs's Principe
-
-Deze applicatie volgt Kerckhoffs's principe: de veiligheid ligt volledig in de geheime sleutel, niet in het algoritme. Alle code is openbaar, alleen de sleutel moet geheim blijven.
-
-## Veiligheid
-
-**Belangrijk**:
-
-- Bewaar sleutels veilig
-- Deel sleutels alleen via veilige kanalen
-- Zonder de juiste sleutel is decryptie onmogelijk
+## Security
+Important:
+* Store keys securely
+* Share keys only through secure channels
+* Without the correct key, decryption is impossible
 
 ## Tests
-
-Run de tests:
-
-```bash
+Run the tests:
+```
 python test_crypto.py
 ```
 
-## Auteur
-
+## Author
 Caner Kümür
