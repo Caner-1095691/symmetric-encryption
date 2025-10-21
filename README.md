@@ -1,14 +1,35 @@
 # Symmetric Encryption Application
 A Python application for securely encrypting and decrypting text using AES-256-GCM
 
-## Installation
+### 1. Create a Virtual Environment (Recommended)
+
+Using a virtual environment keeps your project dependencies isolated and prevents conflicts with other Python projects.
+
+
+```bash
+# run the following in your terminal
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Mac/Linux:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
 ```
+
+### 2. Install Dependencies
+
+```bash
 pip install cryptography
 ```
 
 ## Usage
+
 Start the application:
-```
+
+```bash
 python cli.py
 ```
 
